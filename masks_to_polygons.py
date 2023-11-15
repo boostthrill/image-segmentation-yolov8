@@ -3,8 +3,8 @@ import os
 import cv2
 
 
-input_dir = 'Yolo_Tutorial/data/masks/val'
-output_dir = 'Yolo_Tutorial/data/labels/val'
+input_dir = 'data_full/seg/val'
+output_dir = 'data_full/labels/val'
 
 for j in os.listdir(input_dir):
     image_path = os.path.join(input_dir, j)

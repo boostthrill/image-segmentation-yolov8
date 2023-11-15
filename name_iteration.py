@@ -21,7 +21,7 @@ def rename_images_in_folder(folder_path, base_filename):
 
 if __name__ == "__main__":
     # Definiere den Ordnerpfad, die Basisbezeichnung
-    folder_path ="/home/lucasvidal/Datensatz_Baum/tree/VOCdevkit/VOC2012/SegmentationClass"
+    folder_path ="all_tree_segementation"
     base_filename = "tree"
 
     # Ändere die Bezeichnung der Bilder im angegebenen Ordner
