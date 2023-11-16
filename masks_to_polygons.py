@@ -3,8 +3,8 @@ import os
 import cv2
 
 
-input_dir = 'data_full/seg/val'
-output_dir = 'data_full/labels/val'
+input_dir = 'großer_Stammdatensatz/labels/val'
+output_dir = 'großer_Stammdatensatz/seg/val'
 
 for j in os.listdir(input_dir):
     image_path = os.path.join(input_dir, j)
@@ -26,14 +26,15 @@ for j in os.listdir(input_dir):
                 polygon.append(y / H)
             polygons.append(polygon)
 
-    # print the polygons
+    # print the polygons 
+    # change the nummer to the spezified category 
     with open('{}.txt'.format(os.path.join(output_dir, j)[:-4]), 'w') as f:
         for polygon in polygons:
             for p_, p in enumerate(polygon):
                 if p_ == len(polygon) - 1:
                     f.write('{}\n'.format(p))
                 elif p_ == 0:
-                    f.write('0 {} '.format(p))
+                    f.write('1 {} '.format(p))
                 else:
                     f.write('{} '.format(p))
 
