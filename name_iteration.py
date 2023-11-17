@@ -21,8 +21,8 @@ def rename_images_in_folder(folder_path, base_filename):
 
 if __name__ == "__main__":
     # Definiere den Ordnerpfad, die Basisbezeichnung
-    folder_path ="großer_Stammdatensatz/labels/train"
-    base_filename = "trunk"
+    folder_path ="großer_Baumdatensatz/images/train"
+    base_filename = "apfel"
 
     # Ändere die Bezeichnung der Bilder im angegebenen Ordner
     rename_images_in_folder(folder_path, base_filename)

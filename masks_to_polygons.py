@@ -3,8 +3,8 @@ import os
 import cv2
 
 
-input_dir = 'großer_Stammdatensatz/labels/val'
-output_dir = 'großer_Stammdatensatz/seg/val'
+input_dir = 'großer_Baumdatensatz/labels/train'
+output_dir = 'großer_Baumdatensatz/seg/train'
 
 for j in os.listdir(input_dir):
     image_path = os.path.join(input_dir, j)
@@ -34,7 +34,7 @@ for j in os.listdir(input_dir):
                 if p_ == len(polygon) - 1:
                     f.write('{}\n'.format(p))
                 elif p_ == 0:
-                    f.write('1 {} '.format(p))
+                    f.write('0 {} '.format(p))
                 else:
                     f.write('{} '.format(p))
 
